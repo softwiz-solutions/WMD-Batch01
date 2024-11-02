@@ -1,0 +1,9 @@
+Course Outline:
+
+1. JS / TS
+2. NEXTJS
+3. Tailwind and ShadCN
+4. Redux
+5. API Intergration
+6. React Native
+7. Tamagui
