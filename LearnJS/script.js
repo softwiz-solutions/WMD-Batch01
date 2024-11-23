@@ -155,7 +155,14 @@ console.log("jfksldjf")*/
 // // var result=condition?true:false
 // console.log("age", typeof age);
 // console.log("age",  age);
-// var result = age > 18 ? "your are adult" : "you are child";
+// var result =
+//   age > 18
+//     ? age > 34
+//       ? "you are older"
+//       : age > 19
+//       ? "you are yon"
+//       : "you are adult"
+//     : "you are child";
 // console.log("result", result);
 
 // marks, total maarks, percentage own,
@@ -184,5 +191,121 @@ console.log("jfksldjf")*/
 //   console.log("F");
 // }
 
+// var number1 = 1;
+// var number2 = 23;
+
+// var operator = "@";
+
+// switch (operator) {
+//   case "+": // if(operatos=="+")
+//     console.log("result", number1 + number2);
+//     break;
+//   case "-": // else if (operatos=="-")
+//     console.log("result", number1 - number2);
+//     break;
+//   case "*":
+//     console.log("result", number1 * number2);
+//     break;
+//   case "/":
+//     console.log("result", number1 / number2);
+//     break;
+//   default:
+//     console.log("please enter the correct operato");
+// }
 
 
+
+
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
+console.log("hello world")
