@@ -82,7 +82,7 @@ var cities = ["Fsd", "Lhr", "Isb", "Krch", "Mult", "Hbd"];
 // SPLICE (add, remove ,replace)
 
 // for removing
-var fruits = ["apple", "orange", "banana", "pineapple"];
+// var fruits = ["apple", "orange", "banana", "pineapple"];
 // fruits.splice(starting index,number of element you want to effect)
 
 // fruits.splice(1, 3);
@@ -94,5 +94,23 @@ var fruits = ["apple", "orange", "banana", "pineapple"];
 
 // for replace
 
-fruits.splice(1, 1, "melon", "strwverry");
-console.log("fruit", fruits);
+// fruits.splice(1, 1, "melon", "strwverry");
+// console.log("fruit", fruits);
+
+// Matching
+
+// var cleanCities = ["faisalabad", "lahore", "islamabad", "karachi", "multan"];
+// var userCity = prompt("Enter your city name").toLowerCase(); //karachi
+// var cityFound = false;
+
+// for (var i = 0; i < cleanCities.length; i++) {
+//   if (userCity == cleanCities[i]) {
+//     cityFound = true;
+//     console.log("your city " + userCity + " is clean");
+//     break;
+//   }
+// }
+
+// if (cityFound == false) {
+//   console.log("your city " + userCity + " is not clean");
+// }
