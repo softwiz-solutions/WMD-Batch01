@@ -26,11 +26,14 @@
 var sentence =
   "The New Yorker magazine doesn't allow the phrase 'World War II. ' They say it should be 'the Second World War.' So let's search the following sentence for the banned characters and replace them with the phrase that the New Yorker prefers.";
 
-for (var i = 0; i < sentence.length; i++) {
-  if (sentence.slice(i, i + 12) == "World War II") {
-    sentence =
-      sentence.slice(0, i) + "Second World War" + sentence.slice(i + 12);
-  }
-}
+// for (var i = 0; i < sentence.length; i++) {
+//   if (sentence.slice(i, i + 12) == "World War II") {
+//     sentence =
+//       sentence.slice(0, i) + "Second World War" + sentence.slice(i + 12);
+//   }
+// }
 
-console.log("send", sentence);
+// console.log("send", sentence);
+
+sentence = sentence.replace("World War II", "Second World Warr");
+console.log("🚀 ~ sentence:", sentence)
