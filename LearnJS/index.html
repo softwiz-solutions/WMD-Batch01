@@ -1,18 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" href="style.css"> -->
-  <title>Document</title>
-  <!-- <script src="array.js"></script> -->
-  <!-- <script src="string.js"></script> -->
-  <!-- <script src="math.js"></script> -->
-  <!-- <script src="date.js"></script> -->
-  <script src="functions.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Document</title>
+    <!-- <script src="array.js"></script> -->
+    <!-- <script src="string.js"></script> -->
+    <!-- <script src="math.js"></script> -->
+    <!-- <script src="date.js"></script> -->
+    <script src="functions.js"></script>
+    <style>
+      button {
+        background-color: orange;
+        padding: 5px 10px;
+        font-size: 24px;
+        font-weight: 500;
+        border: 1px solid purple;
+        border-radius: 13px;
+      }
 
-</head>
-<body>
+      .car-image {
+        width: 100%;
+        height: auto;
+        /* max-width: 300px; */
+        object-fit: cover;
+        margin-bottom: 10px;
+        transition: transform 0.5s ease;
+      }
+
+      .result {
+        color: green;
+        font-size: 24px;
+        font-weight: 500;
+        margin-top: 10px;
+      }
+      .userResult {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <a href="JavaScript:void(0)" onclick="greeting('ali','ahmad')">Say Hello</a>
+    <br />
+    <br />
+    <br />
+    <a
+      href="JavaScript:void(0)"
+      onclick="greeting('ali single','ahmad')"
+      ondblclick="greeting('ahmad double','ali')"
+      >Say Hello Double click</a
+    > -->
+
+    <!-- <button onclick="greeting('ali single','ahmad')"
+    onmouseover="greeting('ali on mouse over','ahmad')"
+    onmouseleave="greeting('ali on mouse leave','ahmad')"
   
-</body>
+    >Say Hello</button> -->
+    <!-- onmouseover="src='https://img.freepik.com/free-photo/luxurious-car-parked-highway-with-illuminated-headlight-sunset_181624-60607.jpg'"
+    onmouseleave="src='https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg'" -->
+
+    <!-- <img
+      src="https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg"
+      onmouseover="className='car-image'"
+    /> -->
+
+    <!-- <h1
+      onclick="this.style.color='red';this.style.fontSize='56px'"
+      onmouseleave="this.style.color='pink';this.style.fontSize='56px'"
+    >
+      Hello World!
+    </h1> -->
+
+    <!-- <div>
+      <label for="email">Email</label>
+      <input
+        type="text"
+        id="email"
+        onfocus="this.style.backgroundColor='red'"
+        onblur="this.style.backgroundColor='orange'"
+      />
+      <button onclick="handleSubmit('email')">Submit</button>
+      <br>
+      <br>
+      <input
+        type="text"
+        id="userName"
+        onfocus="this.style.backgroundColor='red'"
+        onblur="this.style.backgroundColor='orange'"
+      />
+      <button onclick="handleSubmit('userName')">Submit</button>
+    </div> -->
+    <!-- proramge 1 -->
+    <form action="">
+      <h1>wrtie a projet</h1>
+      <div>
+        <label for="number1">Enter Number 1</label>
+        <input type="number" name="" id="number1" />
+      </div>
+      <br />
+      <div>
+        <label for="number2">Enbet number 2</label>
+        <input type="number" name="" id="number2" />
+      </div>
+      <!-- <div>
+        <label for="result">Result</label>
+        <input type="number" name="" id="result" readonly class="userResult" />
+      </div> -->
+      <p id="result"></p>
+      <button type="button" onclick="sum()">Submit</button>
+      <button type="reset">Clear</button>
+    </form>
+
+    <p id="para">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      <a href="JavaScript:void(0)" onclick="expandPara()">read more</a>
+    </p>
+  </body>
 </html>
