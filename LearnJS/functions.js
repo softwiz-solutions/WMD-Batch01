@@ -86,3 +86,14 @@ function expandPara() {
   document.getElementById("para").innerHTML =
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa omnis quae nemo cum minus nisi maxime, praesentium cupiditate accusamus atque <b>eesse</b> <i>sunt</i>  accusantium, consequatur qui dignissimos, officia quibusdam ipsam deserunt!";
 }
+
+function getElements() {
+  var div = document.getElementById("paras");
+  var fontSize = document.getElementById("fontSize").value;
+  var allParas = div.getElementsByTagName("p");
+  console.log("🚀 ~ getElements ~ allParas:", allParas);
+
+  for (var i = 0; i < allParas.length; i++) {
+    allParas[i].style.fontSize = fontSize;
+  }
+}
