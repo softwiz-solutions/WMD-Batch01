@@ -1,0 +1,37 @@
+.chat {
+  background-color: red;
+  height: 100vh;
+  position: relative;
+}
+
+.input-section {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#message {
+  width: 100%;
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 34px;
+}
+button {
+  font-size: 15px;
+  background-color: green;
+  border: 1px solid green;
+  border-radius: 34px;
+  padding: 4px 8px;
+}
+
+#message-container {
+  padding: 34px;
+}
+.user-text {
+  font-size: 15px;
+  background-color: orange;
+}

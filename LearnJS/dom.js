@@ -25,3 +25,15 @@ function targetChild() {
   // secondPara.setAttribute("class", "js-class");
   console.log("class", secondPara.attributes[1].nodeValue);
 }
+
+function createElemnent() {
+  var div = document.getElementById("test"); // <div id="text"></div>
+  var nodeToAdd = document.createElement("p"); //<p></p>
+  nodeToAdd.setAttribute("class", "js-para"); //<p class="js-para"></p>
+  var textNode = document.createTextNode("Hello this is js para"); // hello this is para
+  nodeToAdd.appendChild(textNode); // <p class="js-para">hello this is para</p>;
+  // nodeToAdd.innerHTML = "This i spara";
+  div.appendChild(nodeToAdd); // <div id="test"> <p class="js-para">hello is is para</p></div>
+}
+
+createElemnent();
