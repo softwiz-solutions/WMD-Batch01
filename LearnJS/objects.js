@@ -89,8 +89,57 @@ var students = [
 ];
 console.log("student 2 marks", students[1].marks.english);
 
+// var propertyExist="name" in students[1]
+// console.log("🚀 ~ propertyExist:", propertyExist)
 
+// var student = {
+//   email: "user1@gmail.com",
+//   name: "zohan",
+//   password: "123556",
+// };
+// console.log("email", student.email);
+// // console.log("email",student["email"])
+// console.log("keys", Object.keys(student));
+// console.log("keys", Object.entries(student));
 
-var propertyExist="name" in students[1]
-console.log("🚀 ~ propertyExist:", propertyExist)
+// for (var key of Object.keys(student)) {
+//   console.log("key in loop", key); // email
+//   // console.log("value", student[key]);// student["email"] , // student["name"], //student["passowrfd"]
+//   console.log("value in loop", student[key]); // student["email"] , // student["name"], //student["passowrfd"]
+// }
 
+// for (var entry of Object.entries(student)) {
+//   console.log("key:", entry[0], "value", entry[1]);
+// }
+
+// var location = window.location;
+// console.log("location", location);
+
+var goToChat = function () {
+  var location = window.location.origin;
+  console.log("🚀 ~ goToChat ~ location:", location);
+  var destination = location + "/chat.html?name=waqas&password=12345";
+  console.log("des", destination);
+  // window.location.href = destination;
+  // window.location.assign(destination);
+  window.location.replace(destination);
+};
+
+var resfresh = function () {
+  window.location.reload();
+};
+
+var moving = function (type) {
+  if (type == "forward") {
+    history.forward();
+  } else if (type == "back") {
+    history.back();
+  }
+};
+
+var windowOpen = function () {
+  var monkeyWindow = window.open();
+  var windowContent =
+    "<h1>Capuchin monkey</h1><img src= 'monkey.jpg'><p>The word capuchin derives from a group of friars<br>named the Order of Friars Minor Capuchin who wear<br>brown robes with large hoods covering their heads.</p>";
+  monkeyWindow.document.write(windowContent);
+};

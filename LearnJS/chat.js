@@ -13,3 +13,14 @@ function sendMessage() {
   div.appendChild(messagePara); // <div id="message-container">... <p>textMesage</p></div>
   document.getElementById("message").value = "";
 }
+
+var getQuery = () => {
+  var urlParams = new URLSearchParams(window.location.search);
+  var name = urlParams.get("name");
+  document.getElementById("name").innerHTML=name
+  var password = urlParams.get("password");
+  document.getElementById("password").innerHTML=password
+  console.log("🚀 ~ getQuery ~ email:", password);
+};
+
+getQuery();
