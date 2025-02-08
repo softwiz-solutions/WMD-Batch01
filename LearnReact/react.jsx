@@ -6,8 +6,8 @@ function Header(props) {
   //   console.log("title", title);
   //   return <h1>Title: {title}</h1>;
   //   return <h1>{`Cool: ${title}`}</h1>;
-  console.log("value" + title); //simple
-  console.log(`value ${title}`); //template literals
+  // console.log("value" + title); //simple
+  // console.log(`value ${title}`); //template literals
   //   return <h1>{`Cool: ${title}`}</h1>;
   return <h1>{title ? title : "Default value"}</h1>;
 }
@@ -49,6 +49,9 @@ function ServiceCard(props) {
 }
 
 function HomePage() {
+  // var counter=0
+  const [counter, setCounter] = React.useState(0);
+  const [showPara, setShowPara] = React.useState(true);
   const services = [
     {
       title: "Mobile App devleompnet",
@@ -59,11 +62,41 @@ function HomePage() {
       description: "a quick brown fox ",
     },
   ];
+
+  const handleIncrement = () => {
+    setCounter(counter + 1); // counter++
+    //  counter++ ->counter=counter+1
+    // setCounter(10) // counter=10
+    console.log("🚀 ~ handleIncrement ~ counter:", counter);
+  };
+  const handleDeccrement = () => {
+    setCounter(counter - 1); // counter--
+    // setCounter(9); // counter=9
+
+    console.log("🚀 ~ handleDecrement ~ counter:", counter);
+  };
+
+  // const handleShowPara = () => {
+  //   setShowPara(true);
+  //   console.log("🚀 ~ handleShowPara ~ setShowPara:", showPara);
+  // };
+  // const handleHidePara = () => {
+  //   setShowPara(false);
+  //   console.log("🚀 ~ handleHidePara ~ setShowPara:", showPara);
+  // };
+  const handlePara=()=>{
+    setShowPara(!showPara)
+  }
+  console.log("main counter", counter);
+  console.log("main show para", showPara);
   return (
     <div>
-      <Header title="Heading 1" />
-      <Header title="Heading 2" />
-      <Header />
+      <Header title="Counter" />
+      <button onClick={handleDeccrement}>-</button>
+      <span>{counter}</span>
+      <button onClick={handleIncrement}>+</button>
+      {/* <Header title="Heading 2" /> */}
+      {/* <Header />
 
       <List />
 
@@ -76,7 +109,29 @@ function HomePage() {
             </div>
           );
         })}
-      </div>
+      </div> */}
+      
+      {/* {showPara ? (
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, minus
+          nobis sapiente maiores dolore laudantium odit provident harum eligendi
+          ex consequuntur nemo? At fugiat quidem, optio impedit perspiciatis
+          quibusdam nulla.
+        </p>
+      ) : (
+        <p></p>
+      )} */}
+      {showPara  && (
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam
+          fugiat ducimus, cumque in quis ipsum. Delectus nobis voluptatem
+          voluptatum quos numquam, tempore illum inventore, minima optio sunt
+          vitae hic voluptates.
+        </p>
+      )}
+      {/* <button onClick={handlePara}>Show Para</button>
+      <button onClick={handlePara}>Hide Para</button> */}
+      <button onClick={handlePara}>{showPara?"Hide Para":"Show Para"}</button>
     </div>
   );
 }
