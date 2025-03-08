@@ -1,10 +1,13 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "./Button";
 
-export function TodoApp() {
+export function TodoApp({ userTodo }) {
+  console.log("🚀 ~ TodoApp ~ userTodo:", userTodo);
   const [input, setInput] = useState("");
   const [todoList, setTodoList] = useState([]);
+  const [filteredList, setFilteredList] = useState([]);
+  const [filter, setFilter] = useState("");
   const [isEdit, setIsEdit] = useState(false);
   const [singleTodo, setSingleTodo] = useState({
     text: "",
@@ -63,11 +66,44 @@ export function TodoApp() {
     setIsEdit(false);
     setSingleTodo({ text: "", index: "" });
   };
+  // fetchData();
+  // const fetchData = () => {
+  //   const todosFromBackend = ["brakfast", "lunch", "dinner", "play"];
+  //   setTodoList(todosFromBackend);
+  //   console.log("DAta is fetched");
+  // };
+
+  useEffect(() => {
+    // fetchData();
+    setTodoList(userTodo);
+    console.log("userEffect 1");
+  }, []);
+  useEffect(() => {
+    if (filter) {
+      console.log("userEffect 2");
+
+      console.log("filterjlkfsdjklf ", filter);
+      const filteredList = todoList.filter((item) => {
+        return item.toLowerCase().includes(filter.toLowerCase());
+      });
+      setTodoList(filteredList);
+    }
+  }, [filter]);
   return (
     <div className="ms-4 mt-3 ">
       {/* form */}
       <div className="">
         <form className="flex gap-3">
+          <input
+            className="p-3 text-black"
+            type="text"
+            placeholder="Filter"
+            value={filter}
+            onChange={(event) => {
+              //   console.log("event", event.target.value);
+              setFilter(event.target.value);
+            }}
+          />
           <input
             className="p-3 text-black"
             type="text"
