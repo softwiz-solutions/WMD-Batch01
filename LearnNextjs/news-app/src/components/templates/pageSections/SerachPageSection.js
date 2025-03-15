@@ -2,11 +2,13 @@
 import React, { useEffect, useState } from "react";
 import NewsCard from "../cards/NewsCard";
 import MainLoader from "../loaders/MainLoader";
+import { useProviderContext } from "@/context/Provider";
 
 const SerachPageSection = ({ searchQuery }) => {
   console.log("🚀 ~ SerachPageSection ~ searchQuery:", searchQuery);
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(false);
+  const { user } = useProviderContext();
   const fetchNews = async () => {
     try {
       setLoading(true);
@@ -35,6 +37,7 @@ const SerachPageSection = ({ searchQuery }) => {
         <MainLoader />
       ) : (
         <div>
+          {user?.name && <h1>{user.name}</h1>}
           <h1>new api</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {news.map((item, index) => {
