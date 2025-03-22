@@ -5,8 +5,7 @@ import MainLoader from "../loaders/MainLoader";
 import { useProviderContext } from "@/context/Provider";
 
 const HomePageSection = () => {
-  const { user } = useProviderContext();
-  console.log("🚀 ~ HomePageSection ~ user:", user);
+  const { user, handleFavClick } = useProviderContext();
 
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -40,7 +39,15 @@ const HomePageSection = () => {
           <h1>new api</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {news.map((item, index) => {
-              return <NewsCard key={index} article={item} />;
+              return (
+                <NewsCard
+                  key={index}
+                  article={item}
+                  onFavClick={() => {
+                    handleFavClick(item);
+                  }}
+                />
+              );
             })}
           </div>
           {/* <NewsCard title={} description={} content={} url={} image={} publishedAt={} source={}/> */}
