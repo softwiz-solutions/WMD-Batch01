@@ -3,10 +3,13 @@ import React, { useEffect, useState } from "react";
 import NewsCard from "../cards/NewsCard";
 import MainLoader from "../loaders/MainLoader";
 import { useProviderContext } from "@/context/Provider";
+import { useRouter } from "next/navigation";
 
 const HomePageSection = () => {
-  const { user, handleFavClick } = useProviderContext();
-
+  const { user, isUserLogined, handleFavClick, handleArticleExist } =
+    useProviderContext();
+  console.log("🚀 ~ user:", user);
+  const router = useRouter();
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(false);
   const fetchNews = async () => {
@@ -27,7 +30,12 @@ const HomePageSection = () => {
   };
 
   useEffect(() => {
-    fetchNews();
+    console.log("🚀 ~ useEffect ~ isUserLogined:", isUserLogined);
+    if (!isUserLogined) {
+      router.push("/login");
+    } else {
+      fetchNews();
+    }
   }, []);
   return (
     <div>
@@ -39,10 +47,13 @@ const HomePageSection = () => {
           <h1>new api</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {news.map((item, index) => {
+              console.log("🚀 ~ {news.map ~ item:", item);
+              let checkArticleExist = handleArticleExist(item);
               return (
                 <NewsCard
                   key={index}
                   article={item}
+                  articleAlreadyExist={checkArticleExist}
                   onFavClick={() => {
                     handleFavClick(item);
                   }}

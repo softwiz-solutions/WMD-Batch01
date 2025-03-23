@@ -6,12 +6,27 @@ const Context = createContext(undefined);
 export const Provider = ({ children }) => {
   const [favNews, setFavNews] = useState([]);
   const [user, setUser] = useState({
-    name: "John Doe",
-    email: "john.doe@example.com",
+  
+    email: "",
   });
   const [isUserLogined, setIsUserLogined] = useState(false);
+  const handleArticleExist = (article) => {
+    let articleAlreadyExist = favNews.filter(
+      (item) => item.title == article.title
+    );
+    return articleAlreadyExist.length;
+  };
   const handleFavClick = (article) => {
-    setFavNews((prevState) => [...prevState, article]);
+    // console.log("🚀 ~ handleFavClick ~ article:", article);
+    // console.log("🚀 ~ handleFavClick ~ favNews:", favNews);
+    // let articleAlreadyExist = favNews.filter(
+    //   (item) => item.title == article.title
+    // );
+    let articleAlreadyExist = handleArticleExist(article);
+    console.log("🚀 ~ handleFavClick ~ articleAlreadyExist:", articleAlreadyExist)
+
+    if (!articleAlreadyExist )
+      setFavNews((prevState) => [...prevState, article]);
   };
   const handleFavDeleteClick = (index) => {
     let deltedArray = [...favNews];
@@ -20,6 +35,7 @@ export const Provider = ({ children }) => {
     // let filteredArticle=favNews.filter((item)=>item.id != id);
     // setFavNews(filteredArticle);
   };
+
   return (
     <Context.Provider
       value={{
@@ -31,6 +47,7 @@ export const Provider = ({ children }) => {
         setFavNews,
         handleFavClick,
         handleFavDeleteClick,
+        handleArticleExist,
       }}
     >
       {children}

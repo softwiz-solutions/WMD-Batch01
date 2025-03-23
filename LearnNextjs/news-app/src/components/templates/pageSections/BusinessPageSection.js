@@ -37,7 +37,7 @@ const BusinessPageSection = () => {
           <h1>new api</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {news.map((item, index) => {
-              return <NewsCard key={index} article={item} />;
+              return <NewsCard key={index} article={item}  />;
             })}
           </div>
           {/* <NewsCard title={} description={} content={} url={} image={} publishedAt={} source={}/> */}
