@@ -6,7 +6,8 @@ import { useState } from "react";
 // import { FiMenu } from "react-icons/fi";
 
 export default function Navbar() {
-  const {favNews,user}=useProviderContext()
+  const {favNews,user,handleLogout}=useProviderContext()
+  console.log("🚀 ~ Navbar ~ user:", user)
   const [search, setSearch] = useState("");
   const router = useRouter();
   // [
@@ -116,6 +117,15 @@ export default function Navbar() {
           onClick={handleSearch}
         >
           Search
+        </button>
+      </div>
+      <div className="flex items-center bg-gray-800 rounded-lg px-2">
+       
+        <button
+          className="bg-red-600 px-4 py-1 rounded-lg text-white font-semibold hover:bg-red-700"
+          onClick={handleLogout}
+        >
+          Logout
         </button>
       </div>
     </nav>

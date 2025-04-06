@@ -31,12 +31,10 @@ const HomePageSection = () => {
 
   useEffect(() => {
     console.log("🚀 ~ useEffect ~ isUserLogined:", isUserLogined);
-    if (!isUserLogined) {
-      router.push("/login");
-    } else {
+    if (isUserLogined) {
       fetchNews();
     }
-  }, []);
+  }, [isUserLogined, user]);
   return (
     <div>
       {loading ? (

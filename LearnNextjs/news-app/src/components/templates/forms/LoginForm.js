@@ -22,6 +22,7 @@ function LoginForm() {
       const data = await response.json();
       console.log("🚀 ~ handleLogin ~ data:", data);
       if (data.success) {
+        localStorage.setItem("user", JSON.stringify(data.data));
         setUser(data.data);
         setIsUserLogined(true);
         router.push("/");
@@ -41,7 +42,7 @@ function LoginForm() {
     // router.push("/");
   };
   const goToSignup = () => {
-    router.push("/");
+    router.push("/signup");
   };
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
