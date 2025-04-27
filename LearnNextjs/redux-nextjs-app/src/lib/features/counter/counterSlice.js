@@ -4,7 +4,6 @@ const initialState = {
   value: 10,
 };
 // const [value,setValue]=useState(0)
-
 export const counterSlice = createSlice({
   name: "counter",
   initialState,
