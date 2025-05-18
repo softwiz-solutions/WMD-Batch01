@@ -10,7 +10,11 @@ var isActive = true;
 var someValue = "Hello TypeScript";
 var strLength = someValue.length;
 console.log(strLength); // Output: 16
-var input = document.getElementById("username");
-input.value = "TypeScript user";
-var numb = 12;
-numb = "12";
+var student = {
+    name: "ali",
+    age: 20,
+    isActive: true,
+    getName: function () {
+        return this.name;
+    },
+};
