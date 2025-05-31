@@ -102,36 +102,53 @@ interface student {
 //   phoneNumber: "1234567890",
 // };
 
+// interface Animal {
+//   name: string;
+//   sound: string;
+//   age: number;
+// }
+// interface Dog extends Animal {
+//   breed: string;
+// }
+// interface Cat extends Animal {
+//   numberOfLegs: string;
+// }
+// interface Bird extends Animal {
+//   canFly: boolean;
+// }
+
+// let sparrow: Bird = {
+//   name: "Sparrow",
+//   sound: "Chirp",
+//   age: 2,
+//   canFly: true,
+// };
+// let bulldog: Dog = {
+//   name: "Bulldog",
+//   sound: "Bark",
+//   age: 5,
+//   breed: "Bulldog",
+// };
+// let persianCat: Cat = {
+//   name: "Persian Cat",
+//   sound: "Meow",
+//   age: 3,
+//   numberOfLegs: "Four",
+// };
+
+// let namue:string | number;
+// let userType: "admin" | "user" | "guest";
+
+// type userType= string
+
+// let user:userType=12
+// let amdin:userType="dfsfd"
+
 interface Animal {
   name: string;
-  sound: string;
-  age: number;
-}
-interface Dog extends Animal {
-  breed: string;
-}
-interface Cat extends Animal {
-  numberOfLegs: string;
-}
-interface Bird extends Animal {
-  canFly: boolean;
-}
 
-let sparrow: Bird = {
-  name: "Sparrow",
-  sound: "Chirp",
-  age: 2,
-  canFly: true,
 };
-let bulldog: Dog = {
-  name: "Bulldog",
-  sound: "Bark",
-  age: 5,
-  breed: "Bulldog",
-};
-let persianCat: Cat = {
-  name: "Persian Cat",
-  sound: "Meow",
-  age: 3,
-  numberOfLegs: "Four",
-};
+
+interface Animal{
+  age:number
+}
